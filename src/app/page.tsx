@@ -1,5 +1,8 @@
+// @ts-nocheck
 'use client';
+
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import TypeFilter from '@/components/PokemonTypeFilter/PokemonTypeFilter';
 import PokemonList from '@/components/PokemonList/PokemonList';
 
@@ -37,6 +40,9 @@ const Page: React.FC = () => {
   return (
     <div>
       <h1 className='text-xxl text-5xl font-bold xl:first-letter: text-center'>POKEDEX</h1>
+      <Link href="/app/Pokemon/[name]" as="/app/Pokemon/name">
+       PokemonCard
+      </Link>
       <TypeFilter onFilterChange={handleFilterChange} />
       <PokemonList pokemons={pokemons.filter(pokemon => filterType === 'all' || pokemon.types.includes(filterType))} />
     </div>
@@ -44,3 +50,8 @@ const Page: React.FC = () => {
 };
 
 export default Page;
+
+
+
+
+
