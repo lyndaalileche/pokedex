@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Loading from '../loading'; // Importer le composant Loading
-import ErrorComponent from '../erreur'; // Importer le composant d'erreur
+import ErrorComponent from '@/app/error'; // Importer le composant d'erreur
 
 // Définir l'interface pour les détails de l'espèce du Pokémon
 interface PokemonSpeciesDetails {
