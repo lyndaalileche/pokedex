@@ -7,7 +7,7 @@ interface PokemonListProps {
 
 const PokemonList: React.FC<PokemonListProps> = ({ pokemons }) => {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 justify-center">
       {pokemons.map((pokemon) => (
         <PokemonCard key={pokemon.id} {...pokemon} />
       ))}
